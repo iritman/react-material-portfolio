@@ -1,6 +1,11 @@
 import React from "react";
 import "./App.css";
 import { Container, Grid } from "@mui/material";
+import Profile from "./components/profile/profile";
+import Header from "./components/header/header";
+import Portfolio from "./pages/portfolio/portfolio";
+import Resume from "./pages/resume/resume";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
@@ -14,10 +19,13 @@ function App() {
           lg={3}
           style={{ backgroundColor: "blue" }}
         >
-          abc
+          <Profile />
         </Grid>
         <Grid item xs style={{ backgroundColor: "red" }}>
-          xyz
+          <Header />
+          <Portfolio />
+          <Resume />
+          <Footer />
         </Grid>
       </Grid>
     </Container>
