@@ -5,7 +5,6 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-import WorkIcon from "@mui/icons-material/Work";
 
 import "./custom-timeline.css";
 import { Typography } from "@mui/material";
@@ -16,9 +15,7 @@ const CustomTimeline = ({ title, icon, children }) => {
       {/* Item Header */}
       <TimelineItem className="timeline_first_item">
         <TimelineSeparator>
-          <TimelineDot className="timeline_dot_header">
-            <WorkIcon />
-          </TimelineDot>
+          <TimelineDot className="timeline_dot_header">{icon}</TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
@@ -29,12 +26,6 @@ const CustomTimeline = ({ title, icon, children }) => {
       </TimelineItem>
 
       {children}
-
-      {/* Remaining Items */}
-      <TimelineItem>
-        <CustomTimelineSeparator />
-        <TimelineContent>Code</TimelineContent>
-      </TimelineItem>
     </Timeline>
   );
 };
