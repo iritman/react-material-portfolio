@@ -7,10 +7,10 @@ const Footer = () => {
       <AppBar sx={{ backgroundColor: "background.paper" }}>
         <Toolbar disableGutters>
           <Grid container p={2} alignItems="center" direction="row">
-            <Grid item xs={12} md={6}>
+            <Grid item xs>
               <Typography variant="button">Faradars</Typography>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item xs>
               <Typography variant="body2" display="flex" justifyContent="right">
                 ©️2024 All rights reserved
               </Typography>
