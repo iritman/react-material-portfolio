@@ -1,28 +1,47 @@
-import { Typography } from "@mui/material";
+import { Paper, Typography, Box, Button } from "@mui/material";
 import React from "react";
-import CustomTimeline from "../timeline/custom-timeline";
+import Profiletimeline from "../timeline/profile-timeline";
+import {
+  PersonOutlineOutlined as PersonOutlineOutlinedIcon,
+  Download as DownloadIcon,
+} from "@mui/icons-material";
+import personalData from "../../utils/personal-data";
+import resumeData from "../../utils/resume-data";
 
 import "./profile.css";
 import profile_image from "./../../assets/images/my-profile.png";
 
 const Profile = () => {
+  const { name, title } = resumeData;
+
   return (
-    <div className="profile container_shadow">
-      <div className="profile_name">
-        <Typography className="name">Naiem</Typography>
-        <Typography className="title">Title</Typography>
-      </div>
+    <Paper>
+      <Box className="profile_name">
+        <Typography className="name">{name}</Typography>
+        <Typography className="title">{title}</Typography>
+      </Box>
 
       <figure className="profile_image">
         <img src={profile_image} alt="" />
       </figure>
 
-      <div className="profile_information">
-        <CustomTimeline />
-        <br />
-        <button>download</button>
-      </div>
-    </div>
+      <Box>
+        <Profiletimeline
+          icon={<PersonOutlineOutlinedIcon />}
+          items={personalData.items}
+        />
+      </Box>
+
+      <Box pb={3} display="flex" justifyContent="center">
+        <Button
+          variant="contained"
+          endIcon={<DownloadIcon />}
+          className="rounded-btn"
+        >
+          <Typography variant="button">Download CV</Typography>
+        </Button>
+      </Box>
+    </Paper>
   );
 };
 

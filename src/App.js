@@ -1,34 +1,84 @@
-import React from "react";
+import * as React from "react";
+import { styled } from "@mui/material/styles";
+import { Container, Grid, Paper } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./App.css";
-import { Container, Grid } from "@mui/material";
+import { orange, green } from "@mui/material/colors";
 import Profile from "./components/profile/profile";
-import Header from "./components/header/header";
-import Portfolio from "./pages/portfolio/portfolio";
-import Resume from "./pages/resume/resume";
-import Footer from "./components/footer/footer";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: orange[400],
+    },
+    secondary: {
+      main: green[400],
+    },
+  },
+});
 
-function App() {
+// const Item = styled(Paper)(({ theme }) => ({
+//   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+//   ...theme.typography.body2,
+//   padding: theme.spacing(1),
+//   textAlign: "center",
+//   color: theme.palette.text.secondary,
+// }));
+
+export default function FullWidthGrid() {
   return (
-    <Container>
-      <Grid container>
-        <Grid item xs={12} sm={12} md={4} lg={3}>
-          <Profile />
+    <ThemeProvider theme={theme}>
+      <Container className="App">
+        <Grid container spacing={2}>
+          <Grid item sm={12} md={4} lg={3}>
+            <Profile />
+          </Grid>
+          <Grid item xs>
+            <Paper>xs=6 md=4</Paper>
+          </Grid>
         </Grid>
-        <Grid item xs style={{ backgroundColor: "red" }}>
-          <Header />
-          <Router>
-            <Routes>
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/resume" element={<Resume />} />
-            </Routes>
-          </Router>
-          <Footer />
-        </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </ThemeProvider>
   );
 }
+// import React from "react";
+// import "./App.css";
+// import { Container, Grid } from "@mui/material";
+// import Profile from "./components/profile/profile";
+// import Header from "./components/header/header";
+// import Portfolio from "./pages/portfolio/portfolio";
+// import Resume from "./pages/resume/resume";
+// import Footer from "./components/footer/footer";
 
-export default App;
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// function App() {
+//   return (
+//     <Container>
+//       <Grid container spacing={4} style={{ backgroundColor: "blue" }}>
+//         <Grid
+//           item
+//           xs={12}
+//           sm={12}
+//           md={4}
+//           lg={3}
+//           style={{ backgroundColor: "orange" }}
+//         >
+//           <Profile />
+//         </Grid>
+//         <Grid item xs style={{ backgroundColor: "red" }}>
+//           <Header />
+//           <Router>
+//             <Routes>
+//               <Route path="/portfolio" element={<Portfolio />} />
+//               <Route path="/resume" element={<Resume />} />
+//             </Routes>
+//           </Router>
+//           <Footer />
+//         </Grid>
+//       </Grid>
+//     </Container>
+//   );
+// }
+
+// export default App;

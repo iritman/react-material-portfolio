@@ -1,0 +1,12 @@
+.MuiTimelineItem-root {
+    min-height: 30px !important;
+}
+
+.MuiTimelineDot-root {
+    margin: 5px !important;
+}
+
+.MuiStack-root {
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
