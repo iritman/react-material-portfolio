@@ -1,10 +1,10 @@
-import * as React from "react";
-import { styled } from "@mui/material/styles";
-import { Container, Grid, Paper } from "@mui/material";
+import React, { useState } from "react";
+import { Container, Grid } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./App.css";
 import { orange, green } from "@mui/material/colors";
 import Profile from "./components/profile/profile";
+import Header from "./components/header/header";
 
 const theme = createTheme({
   palette: {
@@ -17,15 +17,13 @@ const theme = createTheme({
   },
 });
 
-// const Item = styled(Paper)(({ theme }) => ({
-//   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-//   ...theme.typography.body2,
-//   padding: theme.spacing(1),
-//   textAlign: "center",
-//   color: theme.palette.text.secondary,
-// }));
-
 export default function FullWidthGrid() {
+  const [active_link, setActiveLink] = useState("resume");
+
+  const handleLinkChange = (event, newValue) => {
+    setActiveLink(newValue);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <Container className="App">
@@ -34,7 +32,7 @@ export default function FullWidthGrid() {
             <Profile />
           </Grid>
           <Grid item xs>
-            <Paper>xs=6 md=4</Paper>
+            <Header activeLink={active_link} onChange={handleLinkChange} />
           </Grid>
         </Grid>
       </Container>
