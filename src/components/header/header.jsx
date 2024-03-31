@@ -44,6 +44,7 @@ const Header = ({ activeLink, onChange }) => {
           >
             {tabs.map((t) => (
               <Tab
+                key={t}
                 value={t}
                 label={<Typography variant="button">{t}</Typography>}
               />
