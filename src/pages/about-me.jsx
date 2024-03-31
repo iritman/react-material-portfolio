@@ -51,6 +51,7 @@ const AboutMe = () => {
           for a reliable partner to bring your vision to life, I'm here to help.
           Let's create something extraordinary together.
         </Label>
+        {/* -------------------- */}
       </Box>
     </Paper>
   );

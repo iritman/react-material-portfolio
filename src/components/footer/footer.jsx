@@ -1,9 +1,9 @@
 import React from "react";
-import { AppBar, Box, Paper, Toolbar, Grid, Typography } from "@mui/material";
+import { AppBar, Box, Toolbar, Grid, Typography } from "@mui/material";
 
 const Footer = () => {
   return (
-    <Box mt={2}>
+    <Box mt={2} mb={2}>
       <AppBar sx={{ backgroundColor: "background.paper" }}>
         <Toolbar disableGutters>
           <Grid container p={2} alignItems="center" direction="row">
