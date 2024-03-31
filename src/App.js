@@ -5,6 +5,7 @@ import "./App.css";
 import { orange, green } from "@mui/material/colors";
 import Profile from "./components/profile/profile";
 import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
 
 const theme = createTheme({
   palette: {
@@ -33,6 +34,8 @@ export default function FullWidthGrid() {
           </Grid>
           <Grid item xs>
             <Header activeLink={active_link} onChange={handleLinkChange} />
+
+            <Footer />
           </Grid>
         </Grid>
       </Container>
