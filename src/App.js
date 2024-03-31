@@ -6,6 +6,7 @@ import { orange, green } from "@mui/material/colors";
 import Profile from "./components/profile/profile";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
+import AboutMe from "./pages/about-me";
 
 const theme = createTheme({
   palette: {
@@ -19,7 +20,7 @@ const theme = createTheme({
 });
 
 export default function FullWidthGrid() {
-  const [active_link, setActiveLink] = useState("resume");
+  const [active_link, setActiveLink] = useState(false);
 
   const handleLinkChange = (event, newValue) => {
     setActiveLink(newValue);
@@ -34,7 +35,7 @@ export default function FullWidthGrid() {
           </Grid>
           <Grid item xs>
             <Header activeLink={active_link} onChange={handleLinkChange} />
-
+            <AboutMe />
             <Footer />
           </Grid>
         </Grid>
