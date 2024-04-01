@@ -7,11 +7,10 @@ import {
   Button,
   Stack,
   Typography,
-  Snackbar,
-  Alert,
 } from "@mui/material";
 import PageHeader from "../components/page-header";
 import personalData from "../utils/personal-data";
+import MessageBox from "../components/message-box";
 
 const Contact = () => {
   const { items } = personalData;
@@ -87,6 +86,7 @@ const Contact = () => {
         });
       } catch (ex) {
         console.log("Error", ex.message);
+
         setAlert({
           type: "error",
           message: "Message sending failed. Please try again later.",
@@ -191,7 +191,14 @@ const Contact = () => {
           </Grid>
         </Box>
 
-        <Snackbar
+        <MessageBox
+          open={open}
+          duration={3000}
+          onClose={handleCloseAlert}
+          type={alert.type}
+          message={alert.message}
+        />
+        {/* <Snackbar
           open={open}
           autoHideDuration={3000}
           onClose={handleCloseAlert}
@@ -204,7 +211,7 @@ const Contact = () => {
           >
             {alert.message}
           </Alert>
-        </Snackbar>
+        </Snackbar> */}
       </Paper>
     </>
   );
