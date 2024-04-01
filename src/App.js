@@ -6,7 +6,7 @@ import { orange, green } from "@mui/material/colors";
 import Profile from "./components/profile/profile";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
-import Resume from "./pages/resume";
+import SkillsServices from "./pages/skills-services/skills-services";
 
 const theme = createTheme({
   palette: {
@@ -35,7 +35,7 @@ export default function FullWidthGrid() {
           </Grid>
           <Grid item xs>
             <Header activeLink={active_link} onChange={handleLinkChange} />
-            <Resume />
+            <SkillsServices />
             <Footer />
           </Grid>
         </Grid>

@@ -12,7 +12,7 @@ import {
 import { Home as HomeIcon, Send as SendIcon } from "@mui/icons-material";
 
 const Header = ({ activeLink, onChange }) => {
-  const tabs = ["resume", "portfolio", "blog", "contact"];
+  const tabs = ["resume", "Skills & Services", "portfolio", "contact"];
 
   return (
     <Paper>
