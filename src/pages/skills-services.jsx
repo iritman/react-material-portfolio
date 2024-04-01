@@ -9,9 +9,9 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
-import PageHeader from "../../components/page-header";
+import PageHeader from "../components/page-header";
 import { ArrowRight as ArrowRightIcon } from "@mui/icons-material";
-import skillsServicesData from "../../utils/skills-services-data";
+import skillsServicesData from "../utils/skills-services-data";
 
 const CardIcon = ({ icon: Icon }) => {
   return <Icon fontSize="large" color="primary" />;
