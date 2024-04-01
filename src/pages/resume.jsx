@@ -1,8 +1,8 @@
 import React from "react";
 import { Paper, Box, Typography, Grid } from "@mui/material";
-import ResumeTimeline from "./resume-timeline";
+import ResumeTimeline from "../components/timeline/resume-timeline";
 import { Work as WorkIcon } from "@mui/icons-material";
-import resumeData from "../../utils/resume-data";
+import resumeData from "../utils/resume-data";
 
 const Resume = () => {
   return (

@@ -6,7 +6,7 @@ import { orange, green } from "@mui/material/colors";
 import Profile from "./components/profile/profile";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
-import Resume from "./pages/resume/resume";
+import Resume from "./pages/resume";
 
 const theme = createTheme({
   palette: {
