@@ -5,5 +5,6 @@ export default {
     { title: "Job", value: "Freelancer" },
     { title: "Email", value: "test@faradars.org" },
     { title: "Phone", value: "+98 111 222 3333" },
+    { title: "Address", value: "ABC Boulevard, DEF St, IRAN" },
   ],
 };
