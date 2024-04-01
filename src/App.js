@@ -28,7 +28,7 @@ export default function FullWidthGrid() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container className="App">
+      <Container className="App" maxWidth="xl">
         <Grid container spacing={2}>
           <Grid item sm={12} md={4} lg={3}>
             <Profile />
