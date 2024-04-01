@@ -13,6 +13,10 @@ import PageHeader from "../../components/page-header";
 import { ArrowRight as ArrowRightIcon } from "@mui/icons-material";
 import skillsServicesData from "../../utils/skills-services-data";
 
+const CardIcon = ({ icon: Icon }) => {
+  return <Icon fontSize="large" color="primary" />;
+};
+
 const SkillsServices = () => {
   const { services, skills } = skillsServicesData;
 
@@ -29,7 +33,7 @@ const SkillsServices = () => {
                 <Grid key={index} item xs={12} md={4}>
                   <Paper sx={{ height: "100%" }} elevation={4}>
                     <Box p={3}>
-                      {service.icon}
+                      <CardIcon icon={service.icon} />
                       <Typography variant="h6">{service.title}</Typography>
                       <Typography variant="body2" color="text.secondary">
                         {service.description}

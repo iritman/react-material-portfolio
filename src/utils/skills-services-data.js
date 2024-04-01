@@ -7,17 +7,17 @@ import {
 export default {
   services: [
     {
-      icon: <WebIcon fontSize="large" color="primary" />,
+      icon: WebIcon,
       title: "Web Development",
       description: "I have been a web developer more than 10 years",
     },
     {
-      icon: <DiamondIcon fontSize="large" color="primary" />,
+      icon: DiamondIcon,
       title: "Branding Identity",
       description: "I will make you a brand that is catchy and leaves a trace",
     },
     {
-      icon: <DrawIcon fontSize="large" color="primary" />,
+      icon: DrawIcon,
       title: "Illustrator",
       description: "I have been working on illustration design for 6 years",
     },
