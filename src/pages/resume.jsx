@@ -3,19 +3,13 @@ import { Paper, Box, Typography, Grid } from "@mui/material";
 import ResumeTimeline from "../components/timeline/resume-timeline";
 import { Work as WorkIcon } from "@mui/icons-material";
 import resumeData from "../utils/resume-data";
+import PageHeader from "../components/page-header";
 
 const Resume = () => {
   return (
     <Paper>
       <Box m={2} pl={2} pr={2} pt={6} pb={6}>
-        <Typography
-          variant="h6"
-          sx={{
-            textDecorationLine: "underline",
-          }}
-        >
-          Resume
-        </Typography>
+        <PageHeader title="Resume" />
 
         <Grid container>
           <Grid item xs={12} md={6}>

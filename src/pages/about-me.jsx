@@ -1,5 +1,6 @@
 import React from "react";
 import { Paper, Box, Typography } from "@mui/material";
+import PageHeader from "../components/page-header";
 
 const Label = (props) => {
   const { children } = props;
@@ -18,14 +19,7 @@ const AboutMe = () => {
   return (
     <Paper>
       <Box m={2} pl={2} pr={2} pt={6} pb={6}>
-        <Typography
-          variant="h6"
-          sx={{
-            textDecorationLine: "underline",
-          }}
-        >
-          About me
-        </Typography>
+        <PageHeader title="About me" />
         <Label mt={4}>
           Hey there, I'm Naiem Yousefifard, a versatile freelancer with a
           passion for crafting seamless digital experiences. With over two
