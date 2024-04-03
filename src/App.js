@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useMount } from "react-use";
+import React, { useEffect, useState } from "react";
 import { Container, Grid } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./App.css";
@@ -30,11 +29,11 @@ const App = () => {
 
   const location = useLocation();
 
-  useMount(() => {
+  useEffect(() => {
     const current_location = location.pathname.replace("/", "");
 
-    if (current_location.length > 0) setActiveLink(current_location);
-  });
+    setActiveLink(current_location.length > 0 ? current_location : false);
+  }, [location]);
 
   const handleLinkChange = (event, newValue) => {
     setActiveLink(newValue);
