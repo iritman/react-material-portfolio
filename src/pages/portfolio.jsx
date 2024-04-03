@@ -56,15 +56,36 @@ const Portfolio = () => {
           </Tabs>
         </Box>
 
-        <Box sx={{ backgroundColor: "red" }}>
-          <Grid container sapcing={2}>
-            {selected_items.map((item) => (
-              <Grid item xs={12} md={6} lg={4}>
-                <Typography variant="h6">{item.title}</Typography>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
+        {/* <Box></Box> */}
+        <Grid container spacing={2}>
+          {selected_items.map((item) => (
+            <Grid key={item.id} item xs={12} md={6} lg={4}>
+              <Paper elevation={4} sx={{ height: "100%" }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                  pt={1}
+                >
+                  <img
+                    style={{ width: "300px", height: "200px" }}
+                    src={require(`../assets/portfolio/${item.image}`)}
+                    alt={item.title}
+                  />
+                </Box>
+                <Box mt={1} ml={1} mr={1}>
+                  <Typography variant="subtitle2">{item.title}</Typography>
+                </Box>
+                <Box ml={1} mr={1}>
+                  <Typography paragraph variant="caption">
+                    {item.description}
+                  </Typography>
+                </Box>
+              </Paper>
+            </Grid>
+          ))}
+        </Grid>
       </Box>
     </Paper>
   );
