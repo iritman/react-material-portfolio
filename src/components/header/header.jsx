@@ -9,10 +9,16 @@ import {
   Tab,
   Button,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 import { Home as HomeIcon, Send as SendIcon } from "@mui/icons-material";
 
 const Header = ({ activeLink, onChange }) => {
-  const tabs = ["resume", "Skills & Services", "portfolio", "contact"];
+  const tabs = [
+    { title: "Resume", link: "resume" },
+    { title: "Skills & Services", link: "skills" },
+    { title: "Portfolio", link: "portfolio" },
+    { title: "Contact", link: "contact" },
+  ];
 
   return (
     <Paper>
@@ -28,6 +34,7 @@ const Header = ({ activeLink, onChange }) => {
                 xs: "none",
                 md: "flex",
               },
+              cursor: "pointer",
             }}
             p={2}
           >
@@ -44,11 +51,22 @@ const Header = ({ activeLink, onChange }) => {
           >
             {tabs.map((t) => (
               <Tab
-                key={t}
-                value={t}
-                label={<Typography variant="button">{t}</Typography>}
+                key={t.link}
+                value={t.link}
+                label={<Typography variant="button">{t.title}</Typography>}
+                component={Link}
+                to={`/${t.link}`}
               />
             ))}
+            {/* ------------ 2 */}
+            {/* {tabs.map((t) => (
+                <Tab
+                  key={t}
+                  value={t}
+                  label={<Typography variant="button">{t}</Typography>}
+                />
+              ))} */}
+            {/* ------------ 1 */}
             {/* <Tab value="resume" label="RESUME" />
             <Tab value="portfolio" label="PORTFOLIO" />
             <Tab value="blog" label="BLOG" />
