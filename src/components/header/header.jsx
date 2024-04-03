@@ -35,8 +35,12 @@ const Header = ({ activeLink, onChange }) => {
                 md: "flex",
               },
               cursor: "pointer",
+              textDecoration: "none",
+              color: "text.primary",
             }}
             p={2}
+            component={Link}
+            to="/"
           >
             <HomeIcon />
           </Box>
