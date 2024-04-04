@@ -1,5 +1,5 @@
 import React from "react";
-import { Paper, Box, Typography, Grid } from "@mui/material";
+import { Paper, Box, Grid } from "@mui/material";
 import ResumeTimeline from "../components/timeline/resume-timeline";
 import { Work as WorkIcon } from "@mui/icons-material";
 import resumeData from "../utils/resume-data";
